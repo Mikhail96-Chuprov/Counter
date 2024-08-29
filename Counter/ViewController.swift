@@ -7,13 +7,22 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+final class ViewController: UIViewController {
+    
+    @IBOutlet private weak var labelCount: UILabel!
+    @IBOutlet private weak var buttonClick: UIButton!
+    
+    var count = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+       
     }
 
-
+    @IBAction func buttonCount(_ sender: Any) {
+        count = count + 1
+        labelCount.text = "Значение счётчика: \(count)"
+    }
+    
 }
 
